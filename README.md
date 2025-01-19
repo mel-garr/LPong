@@ -45,7 +45,7 @@ most used methods i will se are :
 ✔ to include a class in lua we do the folowing syntax:
 name_we_will_work_with = require 'name_we_will_work_with_without the .lua'
 
-
+✔ oop aren't really a part of lua , but some ppl created a lib 'class' to manage that
 
 
 
