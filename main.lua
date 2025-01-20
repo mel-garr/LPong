@@ -22,6 +22,7 @@ BALL_SPEED = 60
 
 function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
+    a = math.randomseed(os.time())
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
         resizable = true,
@@ -31,7 +32,7 @@ function love.load()
 
         P1 = Paddle(20, VIRTUAL_HEIGHT / 2, PADDLE_WIDTH, PADDLE_HEIGH)
         P2 = Paddle(VIRTUAL_WIDTH - 30, VIRTUAL_HEIGHT / 2, PADDLE_WIDTH, PADDLE_HEIGH)
-        B1 = Ball(VIRTUAL_WIDTH / 2 - BALL_R, VIRTUAL_HEIGHT / 2 - BALL_R, BALL_R)
+        B1 = Ball( BALL_R)
         game_stat = 'stop'
     end
 
@@ -66,12 +67,12 @@ function love.update(dt)
         else
             P2.dy = 0
         end
+    
+        P1:update(dt)
+        P2:update(dt)
+        B1:update(dt)
     end
     -- print ( math.randomseed(os.time()))
-    print('yoo' ,math.randomseed(os.time()))
-    P1:update(dt)
-    P2:update(dt)
-    B1:update(dt)
 
 end
 
