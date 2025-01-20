@@ -48,6 +48,12 @@ name_we_will_work_with = require 'name_we_will_work_with_without the .lua'
 ✔ oop aren't really a part of lua , but some ppl created a lib 'class' to manage that
 
 
+📌 randomiser math.lib
+math.random(min, max) it gives a random num between min and max
+math.randomise(num) it generate a random number depending on the number num
+os.time() a creative move to generate a random num that we can use (in math.randomiser as var )
+
+
 
 !!! VIRTUAL dimention setup calcul
 
